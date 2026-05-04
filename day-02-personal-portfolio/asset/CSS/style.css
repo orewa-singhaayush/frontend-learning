@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Macondo+Swash+Caps&family=Meddon&family=Montserrat+Alternates:wght@400;500;600&family=Qwigley&family=Syncopate&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: poppins;
+
+}
+/* :root --> It helps you keep colors and styles consistent across your portfolio. */
+:root {
+  --bg-color: #000000;          /* main background (almost black) */
+  --second-bg-color:  #cc1f1f;   /* cards / navbar background */
+  --text-color: #E5E7EB;        /* main text */
+  --main-color: #e02626;        /* primary accent (modern blue) */
+
+      /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat Alternates", sans-serif;
+  --second-font: "Grechen Fuemen", cursive;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+html{
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* navbar styling */
+header {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 1.2rem;
+  border-radius: 40px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+  z-index: 1000;
+}
+
+#menu-icon{
+  font-size:3.5rem;
+  color: var(--main-color);
+  display: none;
+}
+.navbar a{
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    color: #ccc;
+    font-size: 18px;
+
+    transition: all 0.3s ease;
+}
+.navbar a:hover{
+  color: var(--main-color);
+  border: 3px solid var(--main-color)
+}
