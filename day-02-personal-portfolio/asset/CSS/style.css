@@ -27,24 +27,6 @@ body {
 }
 
 /* navbar styling */
-/* header {
-  position: fixed;
-  top: 50%;
-  right: 6rem;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  zoom: 1.5;
-  
-  padding: 3.5rem 2rem;
-  border-radius: 5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  z-index: 1000;
- }  */
 header{
   position: fixed;
   top: 50%;
@@ -57,8 +39,8 @@ header{
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(56, 45, 45, 0.603);
+  box-shadow: 0 10px 30px rgba(244, 241, 241, 0.6);
   z-index: 1000;
   padding: 5rem 2rem;
 }
@@ -71,7 +53,8 @@ header{
 .navbar{
   display: flex;
   flex-direction: column;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 3.5rem;
   /* padding: 3rem 2.5rem; */
 }
@@ -84,7 +67,10 @@ header{
 }
 .navbar a:hover {
   color: var(--main-color);
-  /* border: 3px solid var(--main-color); */
+  transform: translateX(50px) scale(1.7);
+  box-shadow: 0 0 0 6px var(--second-bg-color-color),
+              0 0 240px var(--second-bg-color-color),
+              0 0 40px var(--second-bg-color-color);
 }
 
 section{ 
@@ -100,6 +86,7 @@ section{
   flex-wrap: wrap;
   padding-top: 20rem;
 }
+
 /* -----LEFT SIDE OF HOME----- */
 .leftside{
   display: flex;
@@ -107,6 +94,7 @@ section{
   flex-direction: column;
   padding: 0 2.5rem;
   gap: 2rem;
+  transition: all 0.3s ease;
 
 }
 /*-----Left side Info card-----*/
@@ -142,7 +130,13 @@ section{
   display: block;
   width: 100%;
   border-radius: 20px;
-  
+  transition: all 0.3s ease;
+}
+.infoimage:hover{
+  transform: translateX(-30rem);
+  box-shadow: 0 0 0 6px var(--main-color),
+              0 0 240px var(--main-color),
+              0 0 40px var(--main-color);
 }
 
 .infodescription{
@@ -171,11 +165,17 @@ section{
 }
 .languageicon {
   display: flex;
-  flex-wrap: wrap;     /* allows icons to go to next line */
-  gap: 1.2rem;         /* space between icons */
+  flex-wrap: wrap;     
+  gap: 1.5rem;         
 }
+
 .languageicon i {
-  font-size: 3.4rem;   /* consistent size */
+  font-size: 3.4rem; 
+  transition: all 0.3s ease;  
+}
+.languageicon i:hover {
+  color: var(--main-color);
+  transform: scale(1.7);
 }
 .skillinfo{
   font-family: "Syncopate", sans-serif;
@@ -190,6 +190,7 @@ section{
   display: flex;
   flex: 1.7;
   justify-content: center;
+  
 }
 
 .centerimg {
@@ -321,6 +322,13 @@ span{
   display: block;
   width: 100%;
   border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.rightimage:hover{
+  transform: translateX(30rem);
+  box-shadow: 0 0 0 6px var(--main-color),
+              0 0 240px var(--main-color),
+              0 0 40px var(--main-color);
 }
 .aboutcontacttext{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -384,7 +392,7 @@ span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
   padding: auto;
 }
 .skillsheading{
@@ -460,4 +468,76 @@ span{
     scale: 0.8;
 }
 /* =====END OF SKILLS SECTION===== */
+/* =====Projects Section===== */
+.projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: auto;
+}
+.projectheading{
+  font-family: "Macondo Swash Caps", cursive;
+  font-weight: 400;
+  font-size: 8.0rem;
+  font-style: normal;
+}
 
+/* =====End of Projects Section===== */
+/* =====Contact Setion===== */
+.contact{
+  background-color: var(--bg-color);
+}
+.contactheading{
+  font-family: "Macondo Swash Caps", cursive;
+  font-weight: 400;
+  font-size: 8.0rem;
+  font-style: normal;
+  text-align: center;
+}
+.contactheading span{
+  font-size: 6rem;
+  font-weight:bold;
+}
+.contact form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  margin: 2.5rem;
+  text-align: center;
+}
+.input-box{
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 3.5rem;
+  font-size: 4rem;
+  border: 2px solid var(--main-color);
+  border-radius: 5rem;
+  background-color:rgba(19, 19, 19, 0.072);
+  color: var(--second-bg-color);
+  margin: 2.5rem 0;
+  resize: none;
+  box-shadow: 0 0 25px var(--main-color);
+
+}
+
+.input-group-2 input{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+  padding: 2.5rem 3rem;
+}
+
+
+
+/* =====End of Contact Section===== */
