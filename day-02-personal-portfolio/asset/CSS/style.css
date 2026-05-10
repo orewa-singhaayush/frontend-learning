@@ -45,11 +45,7 @@ header{
   padding: 5rem 2rem;
 }
 
-#menu-icon {
-  font-size: 3.5rem;
-  color: var(--main-color);
-  display: none;
-}
+
 .navbar{
   display: flex;
   flex-direction: column;
@@ -72,6 +68,7 @@ header{
               0 0 240px var(--second-bg-color-color),
               0 0 40px var(--second-bg-color-color);
 }
+
 
 section{ 
   min-height: 100vh; 
@@ -130,13 +127,13 @@ section{
   display: block;
   width: 100%;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
 }
 .infoimage:hover{
-  transform: translateX(-30rem);
-  box-shadow: 0 0 0 6px var(--main-color),
-              0 0 240px var(--main-color),
-              0 0 40px var(--main-color);
+  transform:scale(1.05);
+  box-shadow: 0 0 0 6px var(--text-color),
+              0 0 240px var(--text-color),
+              0 0 40px var(--text-color);
 }
 
 .infodescription{
@@ -205,7 +202,7 @@ section{
   bottom: 3.5rem;
   left: 30%;
   transform: translateX(-50%);
-  width: 50%;
+  width: 55%;
   padding: 3rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.08);
@@ -322,10 +319,10 @@ span{
   display: block;
   width: 100%;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease-in-out;
 }
 .rightimage:hover{
-  transform: translateX(30rem);
+  transform:scale(1.05);
   box-shadow: 0 0 0 6px var(--main-color),
               0 0 240px var(--main-color),
               0 0 40px var(--main-color);
@@ -353,6 +350,7 @@ span{
   transition: 0.4s ease-in-out;
  }
  .aboutimage:hover{
+  transform: scale(1.05);
   box-shadow: 0 0 0 6px var(--main-color),
               0 0 240px var(--main-color),
               0 0 40px var(--main-color);
@@ -487,13 +485,56 @@ span{
 /* projectcardbox is grid-container */
 .projectcardbox{
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
 }
 .project-card{
-  background-color:#443a3a;
-  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color:#1f1a1a;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 2rem;
-  padding: 2.5rem;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  transition: all 1s ease-in-out;
+
+}
+.project-card h3{
+  font-family: "Syncopate", sans-serif;
+  font-style: normal;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.project-card p{
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #8f8e8e;
+}
+.project-card a{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.project-card:hover{
+  transform:scale(1.05);
+  box-shadow: 0 0 0 6px var(--main-color),
+              0 0 240px var(--main-color),
+              0 0 40px var(--main-color);
+}
+.projectimage{
+  width: 100%;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 3rem;
+
 }
 
 /* =====End of Projects Section===== */
@@ -542,6 +583,7 @@ span{
 
 }
 
+
 .input-group-2 input{
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
@@ -553,3 +595,46 @@ span{
 
 
 /* =====End of Contact Section===== */
+.footer{
+  background-color:#363636;
+  padding: 50px 0;
+}
+.footername{
+  font-family: "Macondo Swash Caps", cursive;
+  font-weight: 400;
+  font-size: 5.0rem;
+  font-style: normal;
+  text-align: center
+
+}
+.footer .socialmedia{
+  text-align: center;
+  font-size: 3rem;
+  color: var(--second-bg-color);
+  padding: 2rem 0;
+
+}
+.footer ul{
+  text-align: center;
+  font-size: 3rem;
+
+}
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a{
+  color: var(--text-color);
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.footer .copyright{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  
+}
